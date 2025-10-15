@@ -1,0 +1,19 @@
+[project]
+name = "dedalus-dice-roller"
+version = "0.1.0"
+description = "Dice roller for Dedalus"
+readme = "README.md"
+authors = [
+    { name = "Matthew Collins" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.12.4",
+]
+
+[project.scripts]
+dedalus-dice-roller = "dedalus_dice_roller:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
