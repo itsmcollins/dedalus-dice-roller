@@ -11,9 +11,13 @@ dependencies = [
     "fastmcp>=2.12.4",
 ]
 
-[project.scripts]
-dedalus-dice-roller = "dedalus_dice_roller:main"
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+py-modules = ["main"]
+
+[project.scripts]
+main = "main:main"

@@ -1,6 +1,7 @@
 # src/main.py
 from fastmcp import FastMCP
 import random
+import os
 
 mcp = FastMCP(name="Dice Roller")
 
@@ -12,6 +13,13 @@ def roll_die() -> int:
 def multiply(a: int, b: int) -> int:
     return a * b
 
+
+@mcp.custom_route("/health", methods=["GET"])
+async def health(_req):
+    from starlette.responses import PlainTextResponse
+    return PlainTextResponse("OK")
+
 def main():
-    # Dedalus requires streamable HTTP for remote servers
-    mcp.run(transport="streamable-http")
+    port = int(os.getenv("PORT", 8080))
+    host = "0.0.0.0"
+    mcp.run(transport="streamable-http", host=host, port=port)
