@@ -1307,16 +1307,17 @@ wheels = [
 
 [[package]]
 name = "laissez"
-version = "0.0.1a1"
+version = "0.0.1a2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "eth-account" },
+    { name = "fastmcp" },
     { name = "httpx" },
     { name = "x402" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b1/a3/cedf74c54bad8f0e12ee066b9ffbb6fffcb8539376c0fff59d4bf4bb2a76/laissez-0.0.1a1.tar.gz", hash = "sha256:37b3917b5d6b2506bcbcc222d07725e6a17a9b4e07c4f73823ee6a07444531a1", size = 240973, upload-time = "2025-10-16T12:58:49.343Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9a/4d/e4dcc8b7b3aece092c7b3ad67ada5a8ec7c642ffed2e59f1d289471a4693/laissez-0.0.1a2.tar.gz", hash = "sha256:dd64a09d178c487be80017b653098f51618925204e5007a897303100e201ded4", size = 242641, upload-time = "2025-10-16T20:13:04.963Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/7c/ae5d3392c0cc61fed84d054d61a975f5aef684f9b7e61163ebe6e08ad0ac/laissez-0.0.1a1-py3-none-any.whl", hash = "sha256:89e02bf15e34f4e0a97ee9d02fc71c5a0fa73fbdb49a99a4ad7f03b8e28983cf", size = 5661, upload-time = "2025-10-16T12:58:43.777Z" },
+    { url = "https://files.pythonhosted.org/packages/aa/12/cbdc1c3cf215de9abb0ca856ea48ad9d0e6cbbca612262764ff265483d7c/laissez-0.0.1a2-py3-none-any.whl", hash = "sha256:f6fc75d429bd33387648d29c7ab51d27a1e51a58f49eb76dda9820a41a81e105", size = 8018, upload-time = "2025-10-16T20:13:03.962Z" },
 ]
 
 [[package]]
