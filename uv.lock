@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10"
 
 [[package]]
@@ -319,7 +319,7 @@ version = "3.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
-    { name = "docstring-parser", marker = "python_full_version < '4.0'" },
+    { name = "docstring-parser", marker = "python_full_version < '4'" },
     { name = "rich" },
     { name = "rich-rst" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
@@ -331,14 +331,44 @@ wheels = [
 
 [[package]]
 name = "dedalus-dice-roller"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
+    { name = "dedalus-labs" },
     { name = "fastmcp" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastmcp", specifier = ">=2.12.4" }]
+requires-dist = [
+    { name = "dedalus-labs", specifier = "==0.1.0a9" },
+    { name = "fastmcp", specifier = ">=2.12.4" },
+]
+
+[[package]]
+name = "dedalus-labs"
+version = "0.1.0a9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "distro" },
+    { name = "httpx" },
+    { name = "pydantic" },
+    { name = "sniffio" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c9/87/e558ab271b40e7bf64bca2e09a3c4ce1900d985d25754a9b069b17a4cc63/dedalus_labs-0.1.0a9.tar.gz", hash = "sha256:b9ef205da5c5ef778c5cd8bc5591ba238d632f10274d939d11e0253b77457a22", size = 127009, upload-time = "2025-09-20T15:44:41.883Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/42/831b14cd0db7dafd2215a2f09d3675bf9aa91c395f72668561f0f346cde0/dedalus_labs-0.1.0a9-py3-none-any.whl", hash = "sha256:a02178ab11014d54858a72cd9e8d809c12a86a1abbde654750530fbe1a93ff18", size = 115037, upload-time = "2025-09-20T15:44:40.624Z" },
+]
+
+[[package]]
+name = "distro"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed", size = 60722, upload-time = "2023-12-24T09:54:32.31Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2", size = 20277, upload-time = "2023-12-24T09:54:30.421Z" },
+]
 
 [[package]]
 name = "dnspython"
